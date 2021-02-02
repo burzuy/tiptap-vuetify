@@ -132,6 +132,10 @@ export default {
         buttons: {
           close: 'Close',
           apply: 'Apply'
+        },
+        tabs: {
+          url: 'Ссылка',
+          upload: 'Загрузить'
         }
       }
     },

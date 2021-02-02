@@ -101,6 +101,7 @@ import { mixins } from 'vue-class-component'
 import { Component, Prop } from 'vue-property-decorator'
 import { VRow, VCol, VImg, VDialog, VCard, VCardTitle, VCardText, VCardActions, VBtn, VSpacer, VIcon, VTextField, VTabs, VTab, VTabsSlider, VTabItem, VTabsItems } from 'vuetify/lib'
 import I18nMixin from '~/mixins/I18nMixin'
+import I18nText from '~/i18n/I18nText'
 import ImageUploadArea from '~/extensions/nativeExtensions/image/ImageUploadArea.vue'
 import ImageForm from '~/extensions/nativeExtensions/image/ImageForm.vue'
 import ImageSource from '~/extensions/nativeExtensions/image/ImageSource'
@@ -160,11 +161,11 @@ export default class ImageWindow extends mixins(I18nMixin) {
 
   readonly defaultImageTabs = [
     {
-      name: 'URL',
+      name: new I18nText('extensions.Image.window.tabs.url'),
       component: ImageForm
     },
     {
-      name: 'Upload',
+      name: new I18nText('extensions.Image.window.tabs.upload'),
       component: ImageUploadArea
     }
   ]
